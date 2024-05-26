@@ -5,8 +5,16 @@ import javax.xml.crypto.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
+// Use this when not using a database:
 // @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+
+// Enable CORS using the following code: 
+// origins is the URL of the client application that is allowed to access the resources from the server.
+// 3600 seconds is the maximum amount of time that the preflight request is cached.
+@CrossOrigin(origins = "http://localhost:3000", maxAge = 3600)
 @SpringBootApplication()
 public class Demo1Application {
 

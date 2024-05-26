@@ -8,7 +8,6 @@ import jakarta.persistence.Table;
 import lombok.Data;
 
 // lombok data annotation is used to generate the getters, setters, constructors, and toString method.
-
 @Data
 @Entity
 @Table(name = "employee_db")
